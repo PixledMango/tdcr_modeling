@@ -1,18 +1,18 @@
 #include <iostream>
 #include <vector>
 #include "RIM.hpp"
+#include "RDM.hpp"
 
 
 
 int main() {
-    RIM robot;
-    robot.print_tension();
+    RIM robot_independent;
     
-    robot.change_tension(1,-1,-1);
-    robot.print_tension();
+    robot_independent.change_tension(0,0,0);
+    robot_independent.print_tension();
 
-    robot.change_tension(2,-2,-2);
-    robot.print_tension();
+    RDM roboot_dependent(robot_independent, 10, 1.5);
+    roboot_dependent.print_variables();
 
     return 0;
 }

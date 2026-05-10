@@ -1,11 +1,14 @@
-#ifndef rim_hpp
-#define rim_hpp
+#ifndef RIM_HPP
+#define RIM_HPP
 
 class RIM {
     public:
-        RIM();
         void change_tension(int a, int b, int c);
         void print_tension();
+
+        int get_tension_1();
+        int get_tension_2();
+        int get_tension_3();
 
 
     private:

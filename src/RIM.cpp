@@ -1,12 +1,6 @@
 #include "RIM.hpp"
 #include <iostream>
 
-RIM::RIM(){
-    t_1 = 0;
-    t_2 = 0;
-    t_3 = 0;
-}
-
 void RIM::change_tension(int a, int b, int c){
     t_1 += a;
     t_2 += b;
@@ -14,7 +8,20 @@ void RIM::change_tension(int a, int b, int c){
 }
 
 void RIM::print_tension(){
-    std::cout << t_1 << " ";
-    std::cout << t_2 << " ";
-    std::cout << t_3 << std::endl;
+    std::cout << "t_1 = " << t_1 << std::endl;
+    std::cout << "t_2 = " << t_2 << std::endl;
+    std::cout << "t_3 = " << t_3 << std::endl;
+    std::cout << std::endl;
+}
+
+int RIM::get_tension_1(){
+    return t_1;
+}
+
+int RIM::get_tension_2(){
+    return t_2;
+}
+
+int RIM::get_tension_3(){
+    return t_2;
 }
